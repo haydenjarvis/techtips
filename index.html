@@ -1,52 +1,123 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Blending your styles.css with Materialize */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Your background color */
+            color: #333333;
+        }
+        
+        /* Matching your nav link style */
+        nav {
+            background-color: #ffffff !important;
+            border-bottom: 3px solid #16a34a;
+            box-shadow: none;
+        }
+        nav a { color: #16a34a !important; font-weight: bold; }
+        
+        .brand-logo { color: #16a34a !important; }
+
+        /* Customizing Materialize Cards to match your brand */
+        .card-title { color: #16a34a !important; font-weight: 700 !important; }
+        
+        .btn, .collection-header h4 { color: #16a34a; }
+        
+        /* Media Section Styling */
+        .custom-media-box {
+            background-color: #ffffff;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 1px solid #cccccc;
+        }
+
+        footer {
+            border-top: 2px solid #16a34a;
+            background-color: #f8fafc !important;
+            color: #888888 !important;
+        }
+    </style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-<body onload="alert('Welcome to Tech Tips!')"> <div class="container">
-        <header>
-            <h1>Tech Tips: Reviews & Desk Setups</h1>
-            <nav>
-                <a href="index.html">Home</a> | 
-                <a href="iphone reviews.html">iPhone Reviews</a> | 
-                <a href="desk setup.html">Desk Accessories</a>
-            </nav>
-        </header>
 
-        <div class="main-content">
-            <section>
-                <h2>Welcome to Your Tech Hub</h2>
-                <img src="images/TechTips.jpg" alt="TechTips cover image"> <p>Building a great tech environment starts with choosing the right tools for your daily workflow. Whether you are looking for the latest <b>iPhone performance</b> or trying to find the <i>perfect cable management solution</i>, we provide detailed insights to help you decide. Modern technology should work for you, not against you, and our goal is to simplify the complex world of gadgets into actionable tips. <u>Consistency is key</u> when setting up your digital life, and we are here to guide you through every step of that journey.</p>
-                
-                <p>In this project, we explore the intersection of mobility and productivity. We believe that a high-performance smartphone paired with an ergonomic desk setup creates the ultimate workspace for students and professionals alike. Our reviews focus on real-world usage, battery life, and how these tools integrate into your existing ecosystem. We hope you find these guides useful as you build your own personalized tech stack. Stay tuned for more updates as new hardware hits the market and desk trends evolve.</p>
+<body>
 
-                <h3>What We Cover</h3>
-                <ul>
-                    <li>In-depth iPhone model comparisons</li>
-                    <li>Ergonomic desk accessory recommendations</li>
-                    <li>Software tricks for better productivity</li>
-                    <li>Cable management and organization guides</li>
-                </ul>
-            </section>
+    <nav>
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">TechTips</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="iphone reviews.html">iPhone Reviews</a></li>
+                <li><a href="desk setup.html">Desk Accessories</a></li>
+                <li class="active"><a href="materialize.html">Materialize Pro</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h1 style="color: #16a34a; margin-top: 40px;">Tech Tips: Material Edition</h1>
+                <h2 style="font-size: 1.5rem; color: #555555;">Enhanced Desk & Tech Insights</h2>
+            </div>
         </div>
 
-        <footer>
-            <p>Contact Us: info@techtips.com | 123 Tech Drive, Oxford, OH | (123) 456-7890</p>
-            <p>© 2026 Tech Tips</p>
-        </footer>
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Optimizing Your Workflow</span>
+                        <p>Consistency is key when setting up your digital life. We believe that a high-performance smartphone paired with an ergonomic desk setup creates the ultimate workspace for students and professionals alike.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" style="color: #16a34a;">Read Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row custom-media-box">
+            <div class="col s12 m4 center-align">
+                <h3 style="font-size: 1.2rem;">The Reviewer</h3>
+                <img src="images/TechTips.jpg" alt="Profile" class="circle responsive-img" style="border: 3px solid #16a34a; width: 150px; height: 150px; object-fit: cover;">
+                <p><b>Expert Insight</b></p>
+            </div>
+            
+            <div class="col s12 m8">
+                <h3 style="font-size: 1.2rem;">Featured Video Tour</h3>
+                <div class="video-container">
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <ul class="collection with-header">
+                    <li class="collection-header"><h4>Key Categories</h4></li>
+                    <li class="collection-item">iPhone Performance</li>
+                    <li class="collection-item">Cable Management</li>
+                    <li class="collection-item">Ergonomic Tools</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <script>
-function toggleDark() {
-  var element = document.body;
-  // This checks if the background is currently white, then switches it
-  if (element.style.backgroundColor == 'black') {
-    element.style.backgroundColor = '#f8fafc'; // Your original color
-    element.style.color = '#333333';           // Your original text color
-  } else {
-    element.style.backgroundColor = 'black';
-    element.style.color = 'white';
-  }
-}
-</script>
+
+    <footer class="page-footer">
+        <div class="container center-align" style="padding-bottom: 20px; color: #888888;">
+            <p>Contact Us: info@techtips.com | 123 Tech Drive, Oxford, OH</p>
+            <p>© 2026 Tech Tips</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </body>
 </html>
