@@ -12,16 +12,9 @@
         nav { background-color: #ffffff !important; border-bottom: 3px solid #16a34a; box-shadow: none; }
         nav a { color: #16a34a !important; font-weight: bold; }
         .brand-logo { color: #16a34a !important; padding-left: 20px; }
-        
-        /* Matching the green brand color to Materialize components */
         .btn { background-color: #16a34a !important; }
-        .btn:hover { background-color: #12833b !important; }
         h2, h4, h5 { color: #16a34a; font-weight: 700; }
-        
         .custom-media-box { background-color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px; border: 1px solid #cccccc; }
-        .section-divider { margin: 40px 0; border-bottom: 1px solid #ddd; }
-        
-        /* Carousel styling [cite: 290] */
         .carousel { height: 450px !important; margin-top: 12px; }
         .collapsible-header { color: #16a34a; font-weight: bold; }
     </style>
@@ -35,10 +28,10 @@
                 <li><a href="iphone-reviews.html">Reviews</a></li>
                 <li><a href="desk-setup.html">Accessories</a></li>
                 <li class="active"><a href="materialize.html">Materialize</a></li>
+                <li><a href="new-releases.html">New Releases</a></li>
             </ul>
         </div>
     </nav>
-
     <div class="container">
         <div class="row custom-media-box">
             <div class="col s12 m4 center-align">
@@ -57,26 +50,11 @@
         <div class="custom-media-box">
             <h5>Select Your Primary Device</h5>
             <form action="#">
-                <p>
-                    <label>
-                        <input name="tech" type="radio" value="iPhone" onclick="displayTech()" />
-                        <span>iPhone / iOS</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input name="tech" type="radio" value="Android" onclick="displayTech()" />
-                        <span>Android</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input name="tech" type="radio" value="Desktop" onclick="displayTech()" />
-                        <span>Desktop PC / Mac</span>
-                    </label>
-                </p>
+                <p><label><input name="tech" type="radio" value="iPhone" onclick="displayTech()" /><span>iPhone / iOS</span></label></p>
+                <p><label><input name="tech" type="radio" value="Android" onclick="displayTech()" /><span>Android</span></label></p>
+                <p><label><input name="tech" type="radio" value="Desktop" onclick="displayTech()" /><span>Desktop PC / Mac</span></label></p>
             </form>
-            <p id="tech-response" style="font-weight: bold; margin-top: 15px;"></p>
+            <p id="tech-response" style="font-weight: bold; margin-top: 15px; color: #16a34a;"></p>
         </div>
 
         <div class="section">
@@ -85,13 +63,12 @@
                 <button id="basicPrev" class="btn waves-effect">Prev</button>
                 <button id="basicNext" class="btn waves-effect">Next</button>
             </div>
-            
             <div class="carousel" id="techCarousel">
-                <a class="carousel-item" href="#one!"><img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=500" alt="iPhone"></a>
-                <a class="carousel-item" href="#two!"><img src="https://images.unsplash.com/photo-1493934558415-9d19f0b2b4d2?w=500" alt="Desk Setup"></a>
-                <a class="carousel-item" href="#three!"><img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500" alt="Android Phone"></a>
-                <a class="carousel-item" href="#four!"><img src="https://images.unsplash.com/photo-1595044426077-d36d9236d54a?w=500" alt="Mechanical Keyboard"></a>
-                <a class="carousel-item" href="#five!"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500" alt="Work Laptop"></a>
+                <a class="carousel-item" href="#one!"><img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=500"></a>
+                <a class="carousel-item" href="#two!"><img src="https://images.unsplash.com/photo-1493934558415-9d19f0b2b4d2?w=500"></a>
+                <a class="carousel-item" href="#three!"><img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500"></a>
+                <a class="carousel-item" href="#four!"><img src="https://images.unsplash.com/photo-1595044426077-d36d9236d54a?w=500"></a>
+                <a class="carousel-item" href="#five!"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500"></a>
             </div>
         </div>
 
@@ -100,63 +77,23 @@
             <ul class="collapsible" id="techCollapsible">
                 <li class="active">
                     <div class="collapsible-header"><i class="material-icons">info</i>How do we test products?</div>
-                    <div class="collapsible-body"><span>We spend a minimum of two weeks with every device, testing battery life, performance under load, and build quality.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">settings</i>Desk Setup Optimization</div>
-                    <div class="collapsible-body"><span>Ergonomics are key. We recommend keeping your monitor at eye level and using a chair with proper lumbar support.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">code</i>Software Recommendations</div>
-                    <div class="collapsible-body"><span>Beyond hardware, we review the best productivity apps for both mobile and desktop environments.</span></div>
+                    <div class="collapsible-body"><span>We spend a minimum of two weeks with every device...</span></div>
                 </li>
             </ul>
         </div>
-
-        <div class="row">
-            <div class="col s12 m6">
-                <div class="card blue-grey darken-1">
-                    <div class="card-content white-text">
-                        <span class="card-title">iPhone Insights</span>
-                        <p>Explore our deep dives into the latest hardware and performance metrics.</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="iphone-reviews.html">View Reviews</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // 1) Initialize Carousel [cite: 456-466]
             const carouselElem = document.querySelector('#techCarousel');
-            const carouselInstance = M.Carousel.init(carouselElem, {
-                duration: 200,
-                dist: -100,
-                shift: 0,
-                padding: 10,
-                numVisible: 5,
-                indicators: true
-            });
-
-            // Carousel Controls [cite: 467-470]
+            const carouselInstance = M.Carousel.init(carouselElem, { indicators: true });
             document.querySelector('#basicPrev').addEventListener('click', () => carouselInstance.prev());
             document.querySelector('#basicNext').addEventListener('click', () => carouselInstance.next());
-
-            // 2) Initialize Collapsible [cite: 474-479]
-            const collElem = document.querySelector('#techCollapsible');
-            M.Collapsible.init(collElem, {
-                accordion: true 
-            });
+            M.Collapsible.init(document.querySelector('#techCollapsible'));
         });
-
-        // Brand Interaction Function (Customized from Pastry logic) [cite: 516-521]
         function displayTech() {
             const selected = document.querySelector('input[name="tech"]:checked').value;
-            document.getElementById('tech-response').innerText = 'You selected: ' + selected + '. Great choice for a productivity-focused setup!';
+            document.getElementById('tech-response').innerText = 'You selected: ' + selected + '. Great choice!';
         }
     </script>
 </body>

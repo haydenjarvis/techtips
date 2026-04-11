@@ -91,3 +91,67 @@ footer {
   font-size: 0.85em;
   text-align: center;
 }
+/* --- New Image Card & Grid System --- */
+
+/* Row container using flexbox to align cards */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px; /* Offsets padding from columns */
+}
+
+/* Half width for 2-across layout */
+.half {
+  flex: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* One-fourth width for 4-across layout */
+.one-fourth {
+  flex: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Caption Card Styling */
+.card {
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  background-color: #ffffff;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 250px; /* Fixed height for consistency */
+  object-fit: cover; /* Prevents image distortion */
+  border-radius: 10px 10px 0 0;
+  margin: 0; /* Override existing img margin */
+}
+
+.caption {
+  padding: 15px;
+  background-color: #f8fafc;
+  border-top: 1px solid #eeeeee;
+}
+
+.caption p {
+  margin: 0;
+  font-weight: bold;
+  color: #16a34a; /* Using your brand green */
+}
+
+/* Responsive: Stack on mobile */
+@media screen and (max-width: 600px) {
+  .half, .one-fourth {
+    flex: 100%;
+  }
+}
