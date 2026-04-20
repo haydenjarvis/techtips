@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tech Tips | JQuery Interactions</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // Interaction 1: Toggle [cite: 325]
+            $("#toggleBtn").click(function(){
+                $(".toggle-box").toggle(500);
+            });
+
+            // Interaction 2: Slide [cite: 332]
+            $("#slideBtn").click(function(){
+                $("#setupText").slideUp(1000).slideDown(1000);
+            });
+
+            // Interaction 3: Fade
+            $("#fadeBtn").click(function(){
+                $("#fadeImg").fadeToggle("slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JQuery Interactive Tech Lab</h1>
+            <nav>
+                <a href="index.html">Home</a> | 
+                <a href="iphone-reviews.html">iPhone Reviews</a> | 
+                <a href="desk-setup.html">Desk Accessories</a> |
+                <a href="materialize.html">Materialize Pro</a> |
+                <a href="new-releases.html">New Releases</a> |
+                <a href="jquery.html"><b>JQuery</b></a>
+            </nav>
+        </header>
+
+        <div class="main-content">
+            <section style="background-color: #e8f5e9; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                <h3>1. Specification Toggle</h3>
+                <p>Click the button to show/hide the detailed technical specs for the latest iPhone models.</p>
+                <button id="toggleBtn" style="background-color: #16a34a; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Show/Hide Specs</button>
+                <div class="toggle-box" style="margin-top: 15px; border: 1px solid #ccc; padding: 10px; background: white;">
+                    <ul>
+                        <li><b>A18 Pro Chip</b> - 6-core GPU</li>
+                        <li><b>Display</b> - Always-On Super Retina XDR</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section style="background-color: #f1f8ff; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                <h3>2. Desk Setup Guide Slide</h3>
+                <p>Having trouble focusing? Click below to reveal our desk organization mantra.</p>
+                <button id="slideBtn" style="background-color: #16a34a; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Reveal Mantra</button>
+                <p id="setupText" style="font-weight: bold; color: #16a34a; margin-top: 15px;">"A clean desk is a clean mind. Organize your cables, organize your day."</p>
+            </section>
+
+            <section style="background-color: #fff3e0; padding: 20px; border-radius: 10px;">
+                <h3>3. Device Preview Fade</h3>
+                <p>Is your workspace too cluttered? Use this preview to fade our recommended setup in and out.</p>
+                <button id="fadeBtn" style="background-color: #16a34a; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Toggle Preview</button>
+                <div id="fadeImg" style="margin-top: 15px;">
+                    <img src="https://images.unsplash.com/photo-1493934558415-9d19f0b2b4d2?w=500" alt="Desk Setup" style="max-width: 300px;">
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>© 2026 Tech Tips | JQuery Assignment</p>
+        </footer>
+    </div>
+</body>
+</html>
